@@ -26,4 +26,18 @@ describe("Fundix Landing Page", () => {
     landingPage.checkResponsive("iphone-x");
     landingPage.checkResponsive("macbook-15");
   });
+
+  it("can open help dialog", () => {
+    landingPage.openDialog();
+    LandingAssertions.expectHelpDialogOpened();
+  });
+
+  it("can navigate to navbar sections", () => {
+    landingPage.openHowItWorks();
+    LandingAssertions.assertSectionsToBeVisible("Prove. Trade. Earn.");
+    landingPage.openWhyUs();
+    LandingAssertions.assertSectionsToBeVisible("Why choose Fundix");
+    landingPage.openFAQ();
+    LandingAssertions.assertSectionsToBeVisible("Frequently asked questions");
+  });
 });

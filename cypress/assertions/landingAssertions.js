@@ -31,4 +31,14 @@ export class LandingAssertions {
       cy.request(href).its("status").should("eq", 200);
     });
   }
+
+  static expectHelpDialogOpened() {
+    cy.getIframeBody("iframe[title='Intercom live chat']")
+      .xpath("//span[contains(text(), 'Search for help')]")
+      .should("be.visible");
+  }
+
+  static assertSectionsToBeVisible(section) {
+    cy.xpath(`//span[text()='${section}']`).should("be.visible");
+  }
 }

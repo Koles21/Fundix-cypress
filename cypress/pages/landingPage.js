@@ -7,6 +7,8 @@ export class LandingPage {
   howItWorksNav = "//a[@href='/#works']";
   whyUsNav = "//a[@href='/#why']";
   faqNav = "//a[@href='/#faq']";
+  helpDialog = "[aria-label='Open Intercom Messenger']";
+  searchForHelp = "//span[text()='Search for help']";
 
   visit() {
     cy.visit("/");
@@ -31,5 +33,24 @@ export class LandingPage {
   checkResponsive(viewport) {
     cy.viewport(viewport);
     cy.get(this.bodySelector).should("be.visible");
+  }
+
+  openDialog() {
+    cy.get(this.helpDialog, { timeout: 10000 })
+      .should("be.visible")
+      .click()
+      .first();
+  }
+
+  openHowItWorks() {
+    cy.xpath(this.howItWorksNav).first().click();
+  }
+
+  openWhyUs() {
+    cy.xpath(this.whyUsNav).first().click();
+  }
+
+  openFAQ() {
+    cy.xpath(this.faqNav).first().click();
   }
 }
