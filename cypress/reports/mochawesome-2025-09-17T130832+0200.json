@@ -1,0 +1,225 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 6,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-17T11:08:13.915Z",
+    "end": "2025-09-17T11:08:32.943Z",
+    "duration": 19028,
+    "testsRegistered": 7,
+    "passPercent": 85.71428571428571,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "884a871b-361e-4986-b2a7-2492562d20a9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\landing_page.cy.js",
+      "file": "cypress\\e2e\\landing_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+          "title": "Fundix Landing Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "loads successfully",
+              "fullTitle": "Fundix Landing Page loads successfully",
+              "timedOut": null,
+              "duration": 2641,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_landingAssertions.LandingAssertions.expectPageLoaded();",
+              "err": {},
+              "uuid": "a190d6eb-e62c-404c-86be-4a8af02ce99e",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "shows navigation menu items",
+              "fullTitle": "Fundix Landing Page shows navigation menu items",
+              "timedOut": null,
+              "duration": 376,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_landingAssertions.LandingAssertions.expectNavbarToBeVisible(landingPage);",
+              "err": {},
+              "uuid": "25ca5bc4-ae23-48d5-a747-bb37428f7cb3",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Get funded button is clickable",
+              "fullTitle": "Fundix Landing Page Get funded button is clickable",
+              "timedOut": null,
+              "duration": 438,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_landingAssertions.LandingAssertions.expectGetFundedButtonValid(landingPage.getFundedButtons());",
+              "err": {},
+              "uuid": "c57f1f1d-b85d-4e81-9a85-a5f3a79f506f",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "has no broken links",
+              "fullTitle": "Fundix Landing Page has no broken links",
+              "timedOut": null,
+              "duration": 3007,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_landingAssertions.LandingAssertions.expectNoBrokenLinks(landingPage.getAllLinks());",
+              "err": {},
+              "uuid": "8f629f9b-8b73-4a59-83e4-d4cfe5b33f32",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "is responsive",
+              "fullTitle": "Fundix Landing Page is responsive",
+              "timedOut": null,
+              "duration": 400,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "landingPage.checkResponsive(\"iphone-x\");\nlandingPage.checkResponsive(\"macbook-15\");",
+              "err": {},
+              "uuid": "5d3acd90-44f1-451e-89b4-c1aeed9a54b9",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "can open help dialog",
+              "fullTitle": "Fundix Landing Page can open help dialog",
+              "timedOut": null,
+              "duration": 11014,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "landingPage.openDialog();\n_landingAssertions.LandingAssertions.expectHelpDialogOpened();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[aria-label='Open Intercom Messenger']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `[aria-label='Open Intercom Messenger']`, but never found it.\n    at LandingPage.openDialog (webpack://fundix-cypress/./cypress/pages/landingPage.js:40:7)\n    at Context.eval (webpack://fundix-cypress/./cypress/e2e/landing_page.cy.js:31:16)",
+                "diff": null
+              },
+              "uuid": "9f3d31a0-5de8-4077-8436-917fc709baa0",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "can navigate to navbar sections",
+              "fullTitle": "Fundix Landing Page can navigate to navbar sections",
+              "timedOut": null,
+              "duration": 685,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "landingPage.openHowItWorks();\n_landingAssertions.LandingAssertions.assertSectionsToBeVisible(\"Prove. Trade. Earn.\");\nlandingPage.openWhyUs();\n_landingAssertions.LandingAssertions.assertSectionsToBeVisible(\"Why choose Fundix\");\nlandingPage.openFAQ();\n_landingAssertions.LandingAssertions.assertSectionsToBeVisible(\"Frequently asked questions\");",
+              "err": {},
+              "uuid": "cd0fc309-dd00-4ac3-9f2a-6078d7a6462d",
+              "parentUUID": "c72fc408-33d5-4bee-9b65-0ee677789df4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a190d6eb-e62c-404c-86be-4a8af02ce99e",
+            "25ca5bc4-ae23-48d5-a747-bb37428f7cb3",
+            "c57f1f1d-b85d-4e81-9a85-a5f3a79f506f",
+            "8f629f9b-8b73-4a59-83e4-d4cfe5b33f32",
+            "5d3acd90-44f1-451e-89b4-c1aeed9a54b9",
+            "cd0fc309-dd00-4ac3-9f2a-6078d7a6462d"
+          ],
+          "failures": [
+            "9f3d31a0-5de8-4077-8436-917fc709baa0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18561,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome-[datetime]",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportFilename": "mochawesome-[datetime]"
+      },
+      "version": "6.3.0"
+    }
+  }
+}
